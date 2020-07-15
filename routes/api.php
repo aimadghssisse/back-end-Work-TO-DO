@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::post('user/register', 'UserController@register')->name('user.register');
+Route::post('user/register-student', 'UserController@registerStudent')->name('user.register.student');
+Route::post('user/register-proffesor', 'UserController@registerProfessor')->name('user.register.proffesor');
 
 Route::group(['middleware' => 'auth:api'], function () {
 
